@@ -1,0 +1,15 @@
+{
+    "controlStyles[0].target": "ClockFlyoutExperience.MainPage > Windows.UI.Xaml.Controls.ScrollViewer#TopScrollViewer > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Controls.Grid",
+    "controlStyles[0].styles[0]": "Background:=$ExplorerBlur",
+    "styleConstants[0]": "ExplorerBlur=<WindhawkBlur BlurAmount=\"4\" TintColor=\"#323232\" TintOpacity=\"0.7\" />",
+    "controlStyles[1].target": "Windows.UI.Xaml.Controls.Grid#NetworkFlyoutGrid",
+    "controlStyles[1].styles[0]": "Background:=$ExplorerBlur",
+    "controlStyles[2].target": "Windows.UI.Xaml.Controls.ScrollViewer#JumpListScroller",
+    "controlStyles[2].styles[0]": "Background:=<SolidColorBrush Color=\"{ThemeResource SystemChromeBlackHighColor}\" />",
+    "controlStyles[3].target": "Windows.UI.Xaml.Controls.Grid#SystemItemsContainer",
+    "controlStyles[3].styles[0]": "Background:=<SolidColorBrush Color=\"{ThemeResource SystemChromeMediumHighColor}\" />",
+    "controlStyles[4].target": "MtcUvc.View.MtcUvcView > Windows.UI.Xaml.Controls.StackPanel",
+    "controlStyles[4].styles[0]": "Background:=$ExplorerBlur",
+    "controlStyles[5].target": "Windows.UI.Xaml.Controls.Grid#ActionCenterBackground",
+    "controlStyles[5].styles[1]": "Background:=<SolidColorBrush Color=\"#323232\" Opacity=\"0.7\" />"
+}
