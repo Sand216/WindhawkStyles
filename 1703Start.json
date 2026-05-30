@@ -1,0 +1,23 @@
+{
+    "controlStyles[0].target": "Windows.UI.Xaml.Controls.Border#AcrylicBorder",
+    "controlStyles[0].styles[0]": "Background:=$ExplorerBlur",
+    "styleConstants[0]": "ExplorerBlur=<WindhawkBlur BlurAmount=\"4\" TintColor=\"#1F1F1F\" TintOpacity=\"0.8\" />",
+    "controlStyles[1].target": "Windows.UI.Xaml.Controls.Grid#ContentPaneGrid",
+    "controlStyles[2].target": "StartUI.AllAppsPane",
+    "controlStyles[2].styles[0]": "Width=272",
+    "controlStyles[3].target": "Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter#Root > Windows.UI.Xaml.Controls.Grid",
+    "controlStyles[3].styles[0]": "Margin=12,0,0,0",
+    "controlStyles[4].target": "Windows.UI.Xaml.Controls.Button#Header > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Controls.TextBlock",
+    "controlStyles[4].styles[0]": "Margin=12,0,0,0",
+    "controlStyles[1].styles[0]": "Margin=-1,0,-1,0",
+    "controlStyles[5].target": "Windows.UI.Xaml.Controls.Button#Header > Windows.UI.Xaml.Controls.Border",
+    "controlStyles[5].styles[0]": "BorderThickness=0",
+    "controlStyles[0].styles[1]": "BorderThickness=0,1,1,0",
+    "controlStyles[0].styles[2]": "BorderBrush:=<SolidColorBrush Color=\"{ThemeResource SystemChromeHighColor}\" Opacity=\"0.3\" />",
+    "controlStyles[6].target": "StartUI.NavigationPaneButton > Windows.UI.Xaml.Controls.ContentPresenter",
+    "controlStyles[6].styles[0]": "BorderThickness=0",
+    "controlStyles[7].target": "Windows.UI.Xaml.Controls.Grid#RootPanel > Windows.UI.Xaml.Controls.ContentPresenter",
+    "controlStyles[7].styles[0]": "BorderThickness=0",
+    "controlStyles[8].target": "StartUI.ExpandCollapseButton > Windows.UI.Xaml.Controls.ContentPresenter",
+    "controlStyles[8].styles[0]": "BorderThickness=0"
+}
