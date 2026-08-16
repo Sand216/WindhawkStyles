@@ -1,0 +1,62 @@
+styleConstants:
+  - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#1F1F1F" TintOpacity="0.8" />
+controlStyles:
+  - target: Windows.UI.Xaml.Controls.Border#AcrylicBorder
+    styles:
+      - Background:=$ExplorerBlur
+      - BorderThickness=0,1,1,0
+      - BorderBrush:=<SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" Opacity="0.3" />
+  - target: Windows.UI.Xaml.Controls.Grid#ContentPaneGrid
+    styles:
+      - Margin=-1,0,-1,0
+  - target: StartUI.AllAppsPane
+    styles:
+      - Width=272
+  - target: Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter#Root > Windows.UI.Xaml.Controls.Grid
+    styles:
+      - Padding=12,0,0,0
+  - target: Windows.UI.Xaml.Controls.Button#Header > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Controls.TextBlock
+    styles:
+      - Margin=12,0,0,0
+  - target: Windows.UI.Xaml.Controls.Button#Header > Windows.UI.Xaml.Controls.Border
+    styles:
+      - BorderThickness=0
+  - target: StartUI.NavigationPaneButton > Windows.UI.Xaml.Controls.ContentPresenter
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.Grid#RootPanel > Windows.UI.Xaml.Controls.ContentPresenter
+    styles:
+      - BorderThickness=0
+  - target: StartUI.ExpandCollapseButton > Windows.UI.Xaml.Controls.ContentPresenter
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter#Root
+    styles:
+      - RevealBorderThickness=0
+  - target: Windows.UI.Xaml.Controls.MenuFlyoutSubItem
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.MenuFlyoutItem
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.ListViewItem
+    styles:
+      - BorderThickness=0
+  - target: TextBlock#StatusMessage[Text=System]
+    styles:
+      - Visibility=Collapsed
+  - target: Border#MenuFlyoutPresenterBorder
+    styles:
+      - BorderBrush:=<SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
+  - target: Windows.UI.Xaml.Controls.Primitives.Thumb
+    styles:
+      - RenderTransform:=
+  - target: Windows.UI.Xaml.Controls.Primitives.RepeatButton
+    styles:
+      - Opacity=1
+  - target: Rectangle#VerticalTrackRect
+    styles:
+      - Opacity=1
+  - target: Rectangle#ThumbVisual@CommonStates
+    styles:
+      - Fill@Normal:=<SolidColorBrush Color="{ThemeResource SystemBaseLowColor}" />
