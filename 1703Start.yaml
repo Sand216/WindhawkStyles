@@ -1,11 +1,11 @@
 styleConstants:
-  - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#1F1F1F" TintOpacity="0.8" />
+  - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#161616" TintOpacity="0.847" />
 controlStyles:
   - target: Windows.UI.Xaml.Controls.Border#AcrylicBorder
     styles:
       - Background:=$ExplorerBlur
       - BorderThickness=0,1,1,0
-      - BorderBrush:=<SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" Opacity="0.3" />
+      - BorderBrush:=<SolidColorBrush Color="#545454" Opacity="0.5" />
   - target: Windows.UI.Xaml.Controls.Grid#ContentPaneGrid
     styles:
       - Margin=-1,0,-1,0
@@ -60,3 +60,34 @@ controlStyles:
   - target: Rectangle#ThumbVisual@CommonStates
     styles:
       - Fill@Normal:=<SolidColorBrush Color="{ThemeResource SystemBaseLowColor}" />
+  - target: StartUI.NavigationPaneGrid#RootPanel > Rectangle#BackgroundElement
+    styles:
+      - Fill:=<SolidColorBrush Color="{ThemeResource SystemChromeMediumColor}" />
+  - target: MenuFlyoutItem > Grid, MenuFlyoutSubItem > Grid, JumpViewUI.JumpListItemControl > Grid
+    styles:
+      - Height=32
+  - target: ScrollViewer#MenuFlyoutPresenterScrollViewer
+    styles:
+      - Padding=0
+      - Margin=0
+  - target: ScrollViewer#MenuFlyoutPresenterScrollViewer > Border > Grid > ScrollContentPresenter > ItemsPresenter
+    styles:
+      - Margin=0,9,0,9
+  - target: JumpViewUI.JumpListListView
+    styles:
+      - Background:=<SolidColorBrush Color="{ThemeResource SystemChromeBlackHighColor}" />
+      - Padding=0,0,0,9
+      - Margin=0,8,0,-9
+  - target: Windows.UI.Xaml.Controls.ListViewHeaderItem
+    styles:
+      - Padding=0,9,0,3
+  - target: MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=]
+    styles:
+      - Visibility=Collapsed
+      - //Sleep, Shutdown, Restart, Account Settings, Lock, Sign out, Uninstall, Open file location
+  - target: MenuFlyoutPresenter > * > TextBlock[Text=Sleep], MenuFlyoutPresenter > * > TextBlock[Text=Shut down], MenuFlyoutPresenter > * > TextBlock[Text=Restart], MenuFlyoutPresenter > * > TextBlock[Text=Change account settings], MenuFlyoutPresenter > * > TextBlock[Text=Lock], MenuFlyoutPresenter > * > TextBlock[Text=Sign out]
+    styles:
+      - RenderTransform:=<TranslateTransform X="-27" />
+  - target: MenuFlyoutSubItem > Grid@CommonStates
+    styles:
+      - Background@SubMenuOpened=#404040
