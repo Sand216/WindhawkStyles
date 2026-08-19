@@ -1,5 +1,5 @@
 styleConstants:
-  - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#161616" TintOpacity="0.847" />
+  - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#161616" TintOpacity="0.847" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
 controlStyles:
   - target: Windows.UI.Xaml.Controls.Border#AcrylicBorder
     styles:
