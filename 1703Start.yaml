@@ -1,14 +1,16 @@
 styleConstants:
   - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#161616" TintOpacity="0.847" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+  - AccentBlur=<WindhawkBlur BlurAmount="4" TintColor="{ThemeResource SystemAccentColorDark2}" TintOpacity="0.847" FallbackColor="{ThemeResource SystemAccentColorDark1}" />
 controlStyles:
   - target: Windows.UI.Xaml.Controls.Border#AcrylicBorder
     styles:
       - Background:=$ExplorerBlur
-      - BorderThickness=0,1,1,0
+      - BorderThickness=1
       - BorderBrush:=<SolidColorBrush Color="#545454" Opacity="0.5" />
+      - Margin=-1
   - target: Windows.UI.Xaml.Controls.Grid#ContentPaneGrid
     styles:
-      - Margin=-1,0,-1,0
+      - Margin=0
   - target: StartUI.AllAppsPane
     styles:
       - Width=272
