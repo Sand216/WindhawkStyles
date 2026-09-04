@@ -11,7 +11,7 @@ controlStyles:
   - target: Windows.UI.Xaml.Controls.Grid#ContentPaneGrid
     styles:
       - Margin=0
-  - target: StartUI.AllAppsPane
+  - target: //StartUI.AllAppsPane, Grid#ContentRoot
     styles:
       - Width=272
   - target: Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter#Root > Windows.UI.Xaml.Controls.Grid
@@ -93,3 +93,10 @@ controlStyles:
   - target: MenuFlyoutSubItem > Grid@CommonStates
     styles:
       - Background@SubMenuOpened=#404040
+  - target: StartUI.StartSizingFrame
+    styles:
+      - MinWidth=308
+  - target: StartUI.SplitViewFrame, Image#DropShadow
+    styles:
+      - HorizontalAlignment=Left
+      - // Intentionally break smooth start menu horizontal resizing
