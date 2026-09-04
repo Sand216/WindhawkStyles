@@ -1,0 +1,62 @@
+styleConstants:
+  - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#323232" TintOpacity="0.7" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+  - ActionCenter=<SolidColorBrush Color="#171717" Opacity="0.8" />
+controlStyles:
+  - target: ClockFlyoutExperience.MainPage > Windows.UI.Xaml.Controls.ScrollViewer#TopScrollViewer > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Controls.Grid
+    styles:
+      - Background:=$ExplorerBlur
+  - target: Windows.UI.Xaml.Controls.Grid#NetworkFlyoutGrid
+    styles:
+      - Background:=$ExplorerBlur
+  - target: Windows.UI.Xaml.Controls.ScrollViewer#JumpListScroller
+    styles:
+      - Background:=<SolidColorBrush Color="{ThemeResource SystemChromeBlackHighColor}" />
+  - target: Windows.UI.Xaml.Controls.Grid#SystemItemsContainer
+    styles:
+      - Background:=<SolidColorBrush Color="{ThemeResource SystemChromeMediumHighColor}" />
+  - target: MtcUvc.View.MtcUvcView > Windows.UI.Xaml.Controls.StackPanel
+    styles:
+      - Background:=$ExplorerBlur
+  - target: BatteryFlyoutExperience.BatteryMainPane
+    styles:
+      - Background:=$ExplorerBlur
+  - target: Windows.UI.Xaml.Controls.MenuFlyoutSubItem
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.MenuFlyoutItem
+    styles:
+      - BorderThickness=0
+  - target: Windows.UI.Xaml.Controls.ListViewItem
+    styles:
+      - BorderThickness=0
+  - target: Border#MenuFlyoutPresenterBorder
+    styles:
+      - BorderBrush:=<SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
+  - target: Windows.UI.Xaml.Controls.Grid#ActionCenterBackground
+    styles:
+      - Background:=$ActionCenter
+  - target: QuickActions.AccessibleToggleButton
+    styles:
+      - BorderThickness=2
+  - target: Grid#NotificationCenterBackground > Grid
+    styles:
+      - FlowDirection=1
+  - target: ControlCenter.ExpandCollapseButton > Button > Grid@CommonStates > Border > ContentPresenter > TextBlock
+    styles:
+      - Foreground@Normal=#99FFFFFF
+  - target: Button#ManageNotificationSettingsButton
+    styles:
+      - HorizontalAlignment=0
+      - Content=ACTION CENTER
+      - Foreground=White
+      - FontWeight=Bold
+      - FontSize=16
+      - Padding=0
+  - target: TextBlock#NoNotificationsTextBlock
+    styles:
+      - HorizontalAlignment=0
+      - VerticalAlignment=0
+      - Margin=0,70,0,0
+  - target: Button#ManageNotificationSettingsButton > Grid > Border
+    styles:
+      - Margin=0,16,0,0
