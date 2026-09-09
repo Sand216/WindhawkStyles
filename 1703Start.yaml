@@ -100,3 +100,25 @@ controlStyles:
     styles:
       - HorizontalAlignment=Left
       - // Intentionally break smooth start menu horizontal resizing
+  - target: Border#SpeechTextInputInnerBorder
+    styles:
+      - BorderThickness=0
+  - target: Cortana.UI.Views.CortanaRichSearchBox#SearchTextBox
+    styles:
+      - PlaceholderText=Ask me anything
+  - target: Button#DeleteButton > Grid@CommonStates > Border > TextBlock
+    styles:
+      - Text=
+      - FontFamily=Segoe MDL2 Assets
+      - Foreground=Black
+      - Foreground@PointerOver=White
+      - Foreground@Pressed=White
+      - FontSize=16
+  - target: Button#DeleteButton > Grid@CommonStates
+    styles:
+      - Background@PointerOver:=<SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+  - target: Button#DeleteButton
+    styles:
+      - Width=40
+      - Margin=0
+      - Visibility=Visible
