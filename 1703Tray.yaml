@@ -1,25 +1,36 @@
 styleConstants:
   - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#323232" TintOpacity="0.7" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
-  - ActionCenter=<SolidColorBrush Color="#171717" Opacity="0.8" />
+  - ActionCenter=<WindhawkBlur BlurAmount="0" TintColor="#171717" TintOpacity="0.8" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
+  - AccentBlur=<WindhawkBlur BlurAmount="4" TintColor="{ThemeResource SystemAccentColorDark2}" TintOpacity="0.847" FallbackColor="{ThemeResource SystemAccentColorDark1}" />
+  - ActionCenterAccent=<WindhawkBlur BlurAmount="0" TintColor="{ThemeResource SystemAccentColorDark2}" TintOpacity="0.847" FallbackColor="{ThemeResource SystemAccentColorDark1}" />
+  - // Action Center already has a layer of legacy blur, so no need to blur on top of it.
 controlStyles:
-  - target: ClockFlyoutExperience.MainPage > Windows.UI.Xaml.Controls.ScrollViewer#TopScrollViewer > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Controls.Grid
+  - target: ClockFlyoutExperience.MainPage > Windows.UI.Xaml.Controls.ScrollViewer#TopScrollViewer@AcrylicStates > Windows.UI.Xaml.Controls.Border > Windows.UI.Xaml.Controls.Grid
     styles:
-      - Background:=$ExplorerBlur
-  - target: Windows.UI.Xaml.Controls.Grid#NetworkFlyoutGrid
+      - Background@NormalAcrylic:=$ExplorerBlur
+      - Background@LightThemeEnabledNormalAcrylic:=$ExplorerBlur
+      - Background@AccentAcrylic:=$AccentBlur
+  - target: Grid#LogonFrameGrid@NetworkFlyoutBackgroundStates > Border#LogonFrameBorder > Windows.UI.Xaml.Controls.Grid#NetworkFlyoutGrid
     styles:
-      - Background:=$ExplorerBlur
+      - Background@NormalAcrylic:=$ExplorerBlur
+      - Background@LightThemeEnabledNormalAcrylic:=$ExplorerBlur
+      - Background@AccentAcrylic:=$AccentBlur
   - target: Windows.UI.Xaml.Controls.ScrollViewer#JumpListScroller
     styles:
       - Background:=<SolidColorBrush Color="{ThemeResource SystemChromeBlackHighColor}" />
   - target: Windows.UI.Xaml.Controls.Grid#SystemItemsContainer
     styles:
       - Background:=<SolidColorBrush Color="{ThemeResource SystemChromeMediumHighColor}" />
-  - target: MtcUvc.View.MtcUvcView > Windows.UI.Xaml.Controls.StackPanel
+  - target: MtcUvc.View.MtcUvcView > Windows.UI.Xaml.Controls.StackPanel@AcrylicStates
     styles:
-      - Background:=$ExplorerBlur
-  - target: BatteryFlyoutExperience.BatteryMainPane
+      - Background@NormalAcrylic:=$ExplorerBlur
+      - Background@LightThemeEnabledNormalAcrylic:=$ExplorerBlur
+      - Background@AccentAcrylic:=$AccentBlur
+  - target: BatteryFlyoutExperience.BatteryMainPane@AcrylicStates
     styles:
-      - Background:=$ExplorerBlur
+      - Background@NormalAcrylic:=$ExplorerBlur
+      - Background@LightThemeEnabledNormalAcrylic:=$ExplorerBlur
+      - Background@AccentAcrylic:=$AccentBlur
   - target: Windows.UI.Xaml.Controls.MenuFlyoutSubItem
     styles:
       - BorderThickness=0
@@ -32,9 +43,11 @@ controlStyles:
   - target: Border#MenuFlyoutPresenterBorder
     styles:
       - BorderBrush:=<SolidColorBrush Color="{ThemeResource SystemChromeHighColor}" />
-  - target: Windows.UI.Xaml.Controls.Grid#ActionCenterBackground
+  - target: Grid#RootGrid@AcrylicStates > Windows.UI.Xaml.Controls.Grid#ActionCenterBackground
     styles:
-      - Background:=$ActionCenter
+      - Background@NormalAcrylic:=$ActionCenter
+      - Background@LightThemeEnabledNormalAcrylic:=$ActionCenter
+      - Background@AccentAcrylic:=$ActionCenterAccent
   - target: QuickActions.AccessibleToggleButton
     styles:
       - BorderThickness=2
