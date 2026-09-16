@@ -2,9 +2,11 @@ styleConstants:
   - ExplorerBlur=<WindhawkBlur BlurAmount="4" TintColor="#161616" TintOpacity="0.847" FallbackColor="{ThemeResource SystemChromeMediumColor}" />
   - AccentBlur=<WindhawkBlur BlurAmount="4" TintColor="{ThemeResource SystemAccentColorDark2}" TintOpacity="0.847" FallbackColor="{ThemeResource SystemAccentColorDark1}" />
 controlStyles:
-  - target: Windows.UI.Xaml.Controls.Border#AcrylicBorder
+  - target: Grid#RootGrid@AcrylicStates > Windows.UI.Xaml.Controls.Border#AcrylicBorder
     styles:
-      - Background:=$ExplorerBlur
+      - Background@NormalAcrylic:=$ExplorerBlur
+      - Background@LightThemeEnabledNormalAcrylic:=$ExplorerBlur
+      - Background@AccentAcrylic:=$AccentBlur
       - BorderThickness=1
       - BorderBrush:=<SolidColorBrush Color="#545454" Opacity="0.5" />
       - Margin=-1
@@ -83,11 +85,11 @@ controlStyles:
   - target: Windows.UI.Xaml.Controls.ListViewHeaderItem
     styles:
       - Padding=0,9,0,3
-  - target: MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=]
+  - target: MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=], MenuFlyoutPresenter > * > FontIcon[Glyph=]
     styles:
       - Visibility=Collapsed
-      - //Sleep, Shutdown, Restart, Account Settings, Lock, Sign out, Uninstall, Open file location
-  - target: MenuFlyoutPresenter > * > TextBlock[Text=Sleep], MenuFlyoutPresenter > * > TextBlock[Text=Shut down], MenuFlyoutPresenter > * > TextBlock[Text=Restart], MenuFlyoutPresenter > * > TextBlock[Text=Change account settings], MenuFlyoutPresenter > * > TextBlock[Text=Lock], MenuFlyoutPresenter > * > TextBlock[Text=Sign out]
+      - //Sleep, Shutdown, Restart, Account Settings, Lock, Sign out, Uninstall, Open file location, Update dot, Update and restart, Update and shutdown
+  - target: MenuFlyoutPresenter > * > TextBlock[Text=Sleep], MenuFlyoutPresenter > * > TextBlock[Text=Shut down], MenuFlyoutPresenter > * > TextBlock[Text=Restart], MenuFlyoutPresenter > * > TextBlock[Text=Change account settings], MenuFlyoutPresenter > * > TextBlock[Text=Lock], MenuFlyoutPresenter > * > TextBlock[Text=Sign out], MenuFlyoutPresenter > * > TextBlock[Text=Update and shut down], MenuFlyoutPresenter > * > TextBlock[Text=Update and restart]
     styles:
       - RenderTransform:=<TranslateTransform X="-27" />
   - target: MenuFlyoutSubItem > Grid@CommonStates
