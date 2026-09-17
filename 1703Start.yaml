@@ -64,9 +64,11 @@ controlStyles:
   - target: Rectangle#ThumbVisual@CommonStates
     styles:
       - Fill@Normal:=<SolidColorBrush Color="{ThemeResource SystemBaseLowColor}" />
-  - target: StartUI.NavigationPaneGrid#RootPanel > Rectangle#BackgroundElement
+  - target: Grid#RootGrid@AcrylicStates > * > StartUI.NavigationPaneGrid#RootPanel > Rectangle#BackgroundElement
     styles:
-      - Fill:=<SolidColorBrush Color="{ThemeResource SystemChromeMediumColor}" />
+      - Fill@NormalAcrylic:=<SolidColorBrush Color="{ThemeResource SystemChromeMediumColor}" />
+      - Fill@LightThemeEnabledNormalAcrylic:=<SolidColorBrush Color="{ThemeResource SystemChromeMediumColor}" />
+      - Fill@AccentAcrylic:=<SolidColorBrush Color="{ThemeResource SystemAccentColorDark2}" />
   - target: MenuFlyoutItem > Grid, MenuFlyoutSubItem > Grid, JumpViewUI.JumpListItemControl > Grid
     styles:
       - Height=32
@@ -124,3 +126,6 @@ controlStyles:
       - Width=40
       - Margin=0
       - Visibility=Visible
+  - target: StartUI.NavigationPaneGrid#RootPanel > Image#DropShadow
+    styles:
+      - Visibility=Collapsed
